@@ -8,10 +8,10 @@
    ```
 2. Set environment variables in a `.env` file:
    ```env
-PORT=3000
-HOST=0.0.0.0
-DATABASE=db.sqlite
-FRONTEND_URL=http://localhost:5173
+    PORT=3000
+    HOST=0.0.0.0
+    DATABASE=db.sqlite
+    FRONTEND_URL=http://localhost:5173
    ```
 3. Run the Flask application:
    ```sh
