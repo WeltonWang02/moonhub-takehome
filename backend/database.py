@@ -41,7 +41,8 @@ class InventoryDB:
     def get_products(self, filter="", limit=10, sort="name", order="asc"):
         with self.session_scope() as session:
             query = session.query(Product)
-            # Existing filter logic
+            if filter:
+                query = query.filter(Product.name.like(f'%{filter}%') | Product.description.like(f'%{filter}%'))
             if sort and order:
                 sort_column = getattr(Product, sort, None)
                 if sort_column:
